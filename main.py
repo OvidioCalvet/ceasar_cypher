@@ -18,8 +18,9 @@ def encrypt(original_text, shift_amount):
           
     print(f"Here is your encoded result: {cypher_text}")
           
-
 encrypt(text, shift)
+
+print("ovidios new branch is active!")
 
 # TODO-1: Create a function called 'decrypt()' that takes 'original_text' and 'shift_amount' as inputs.
 
