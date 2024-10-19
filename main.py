@@ -17,8 +17,6 @@ def encrypt(original_text, shift_amount):
         cypher_text += shifted_position
           
     print(f"Here is your encoded result: {cypher_text}")
-          
-print("Hello World")
 
 encrypt(text, shift)
 
