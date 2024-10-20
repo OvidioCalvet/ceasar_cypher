@@ -6,32 +6,20 @@ shift = int(input("Type the shift number:\n"))
 
 def ceasar(encryption_type, original_text, shift_amount):
 
+    result_text = ""
+
     if encryption_type == "decode":
 
-        decrypted_text = ""
+        shift_amount *= -1
 
-        for letter in original_text:
+    for letter in original_text:
 
-            original_position = alphabet.index(letter) - shift_amount
+        shifted_position = alphabet.index(letter) + shift_amount
 
-            original_position %= len(alphabet)
+        shifted_position %= len(alphabet)
 
-            decrypted_text += alphabet[original_position]
+        result_text += alphabet[shifted_position]
     
-        print(f"Here is your decrypted result: {decrypted_text}")
-
-    else:
-
-        cypher_text = ""
-
-        for letter in original_text:
-     
-            shifted_position = alphabet.index(letter) + shift_amount
-
-            shifted_position %= len(alphabet)
-
-            cypher_text += alphabet[shifted_position]
-          
-        print(f"Here is your encoded result: {cypher_text}")
+    print(f"Here is your result: {result_text}")
 
 ceasar(direction, text, shift)
